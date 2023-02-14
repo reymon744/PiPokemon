@@ -1,0 +1,21 @@
+.numbers {
+    margin-left: 10px;
+    align-items: center;
+    display: inline;
+    padding: 8px;
+    }
+
+.buttonPages {
+    background-color: orange;
+    color: black;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.buttonPages:hover {
+    cursor:pointer;
+    color: white;
+}

@@ -1,0 +1,42 @@
+.card {
+    background: orange;
+    margin: 35px;
+    width: 17rem;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 400ms ease;
+    box-sizing: content-box;
+    min-height: 150px;
+  }
+  
+  .card:hover {
+    transform: scale(1.2);
+  }
+  
+  .name {
+    font-family: "Andy";
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .typeCard {
+    list-style-type: none;
+    color: white;
+    text-decoration-line: none;
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: "Andy";
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+
+  
+  ul li {
+    text-decoration-line: none;
+    list-style-type: none;
+    text-align: center;
+    align-content: center;
+  }
