@@ -103,7 +103,7 @@ export default function Home() {
               <select onChange={handleFilterCreated}>
                 <option value="All"> All </option>
                 <option value="Created"> Created </option>
-                <option value="DataBase"> Data Base </option>
+                <option value="DataBase"> Api </option>
               </select>
             </div>
           <div className="divCurrentPokemons">

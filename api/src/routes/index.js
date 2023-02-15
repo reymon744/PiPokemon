@@ -5,6 +5,8 @@ const pokemonsRoute = require ('./pokemons')
 const typesRoute = require ('./types')
 const pokemonsIdRoute = require ('./pokemonsId')
 const pokemonPostRoute = require ('./pokemonPost')
+const deletePokemonRoute = require ('./deletePokemon')
+const pokemonUpdateRoute = require ('./pokemonUpdate')
 
 const router = Router();
 
@@ -13,8 +15,11 @@ const router = Router();
 router.use('/pokemons', [
     pokemonsRoute,
     pokemonsIdRoute,
-    pokemonPostRoute
+    pokemonPostRoute,
+    deletePokemonRoute,
+    pokemonUpdateRoute
 ]); 
+
 router.use('/types', typesRoute);
 
 

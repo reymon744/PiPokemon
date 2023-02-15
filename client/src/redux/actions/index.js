@@ -11,6 +11,8 @@ export const FILTER_CREATED = "FILTER_CREATED";
 export const FILTER_BY_ATTACK = "FILTER_BY_ATTACK";
 export const POST_POKEMON = "POST_POKEMON"
 export const REMOVE_SELECTED_POKEMON = "REMOVE_SELECTED_POKEMON"
+export const DELETE_POKEMON = "DELETE_POKEMON"
+export const UPDATE_POKEMON = "UPDATE_POKEMON"
 
 
 //traemos los Pokemon del back
@@ -79,3 +81,23 @@ export const filterByAttack = (payload) => ({
 export const removeSelectedPokemon = () => ({
   type: REMOVE_SELECTED_POKEMON
 });
+
+export const deletePokemon = (name) => {
+  return async (dispatch) => {
+    try {
+      const response = await fetch(`http://localhost:3001/pokemons?delete&name=${name}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong');
+      }
+
+    dispatch({ type: DELETE_POKEMON });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+
