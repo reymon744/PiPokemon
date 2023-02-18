@@ -106,7 +106,8 @@ function onSubmit(e) {
   return (
     <>
     <NavBar />
-    <form className="form" onSubmit={onSubmit}> 
+    <div>
+    <form  onSubmit={onSubmit}> 
       <div className="form-group">
         <label for="name"> Name: </label>
         <input
@@ -226,6 +227,7 @@ function onSubmit(e) {
       </div>        
       <button type="submit" className="submit">Create Pokemon</button>
     </form>
+    </div>
     </>
   );
 }

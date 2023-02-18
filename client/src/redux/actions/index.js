@@ -101,3 +101,11 @@ export const deletePokemon = (name) => {
 };
 
 
+export const updatePokemon = (id, payload) => async (dispatch) => {
+  try {
+    await axios.put(`http://localhost:3001/pokemons/${id}`, payload); 
+    return dispatch({ type: UPDATE_POKEMON }); 
+  } catch (err) {
+    console.log(err);
+  }
+};

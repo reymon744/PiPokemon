@@ -26,7 +26,7 @@
   font-size: 20px;
 }
 
-.form-group {
+.form-group2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -48,7 +48,7 @@ label {
 	width: 80px;
 	text-align: left;
 }
-.error{
+.error2{
 	color:rgb(255, 0, 0);
 	margin-top: 2px;
 	font-size: 14px;
@@ -62,7 +62,7 @@ label {
 }
 
 
-.submit{	
+.submit2{	
   justify-content: center;
   align-items: center;
   color: black;
@@ -76,7 +76,7 @@ label {
   background: orange;  
 }
 
-.submit:hover {
+.submit2:hover {
 	cursor: pointer;
 	color: white;	
 	}
