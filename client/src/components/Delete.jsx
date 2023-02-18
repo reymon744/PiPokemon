@@ -1,14 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { deletePokemon } from "../redux/actions/index.js";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deletePokemon, getPokemons } from "../redux/actions/index.js";
 import {useHistory} from "react-router-dom"
 import NavBar from "./NavBar.jsx";
 import "./SearchBar.css";
 
 export default function Delete() {
     const dispatch = useDispatch();
+    const allPokemons = useSelector((state) => state.pokemons)
     const history = useHistory(); 
+
     const [name, setName] = useState("") //estado local
       
     const handleInputChange = (e) => {
@@ -18,9 +20,14 @@ export default function Delete() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      if (allPokemons.some(e => e.name === name)) {
       dispatch(deletePokemon(name))
       alert("Pokemon has been exterminated");
       history.push("/home");
+      }
+      else {
+        alert("Pokemon not found")
+      }
     }
   
     return (
