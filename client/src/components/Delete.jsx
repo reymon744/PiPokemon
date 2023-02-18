@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deletePokemon, getPokemons } from "../redux/actions/index.js";
 import {useHistory} from "react-router-dom"
 import NavBar from "./NavBar.jsx";
-import "./SearchBar.css";
+import "./Delete.css";
 
 export default function Delete() {
     const dispatch = useDispatch();
@@ -33,19 +33,19 @@ export default function Delete() {
     return (
       <>
       <NavBar />
-      <body className="no-scroll">
-      <div className="divLanding">
+      <body className="no-scroll2">
+      <div className="divLanding2">
         <div>
-        <img className="imageDelete" src="https://townsquare.media/site/295/files/2019/10/Terminator-Orion.jpg?w=980&q=75" alt="" />
+        <img className="imageDelete2" src="https://townsquare.media/site/295/files/2019/10/Terminator-Orion.jpg?w=980&q=75" alt="" />
         </div>
         <div>
         <input
-          className="inputsearch"
+          className="inputsearch2"
           type="text"
           onChange= {(e) => handleInputChange(e)}
           placeholder="Pokemon's name to exterminate..."
         />
-        <button className ="searchButton" type="submit" onClick= {(e) => handleSubmit(e)}> Delete </button>
+        <button className ="searchButton2" type="submit" onClick= {(e) => handleSubmit(e)}> Delete </button>
       </div>                 
       </div>
       </body>

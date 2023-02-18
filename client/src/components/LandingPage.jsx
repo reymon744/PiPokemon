@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
+import landingImage from "../Images/landingPage.jpg"
 
 export default function LandingPage() {
     return (
       <body className="no-scroll">
       <div className="divLanding">
-          <img className="image" src="https://wallpaperaccess.com/full/1805129.jpg" alt="" />
+          <img className="image" src={landingImage} alt="" />
         <div>
           </div>
           <Link to="/home">

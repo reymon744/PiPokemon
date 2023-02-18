@@ -81,7 +81,7 @@ export default function Detail(props) {
         )}
       </div>
       <div className="spaceForBack">
-      <Link onClick= {(e) => handleClick(e)} to={`/update/${props.match.params.id}`} className="backLink"> Update Pokemon </Link>
+      <Link onClick= {(e) => handleClick(e)} to={`/update/${props.match.params.id}`} className="backLink"> Evolve Pokemon </Link>
       <div className="backBotonDetails"></div>
       <Link onClick= {(e) => handleClick(e)} to="/home" className="backLink"> Back </Link> 
        

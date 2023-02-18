@@ -39,7 +39,10 @@ export default function UpdatePage() {
   const dispatch = useDispatch();
   const history = useHistory();
   const types = useSelector((state) => state.types);
+  const allPokemons = useSelector((state) => state.pokemons)
   const { id } = useParams();
+  const oldname = allPokemons.find(e => e.id === id).name
+
   console.log(id)
   const [pokemon, setPokemon] = useState({ // set the initial state using the existing pokemon
     name: "",
@@ -85,7 +88,7 @@ export default function UpdatePage() {
       return;
     }
     dispatch(updatePokemon(id, pokemon)); // send the updated pokemon to the API via the updatePokemon action
-    alert('Pokemon has been updated');
+    alert(`${oldname.charAt(0).toUpperCase() + oldname.slice(1)} has evolved into ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}!`);
     history.push('/home');
   }
 
@@ -212,7 +215,7 @@ export default function UpdatePage() {
         </select>
         </p>
       </div>        
-      <button type="submit" className="submit2">Update Pokemon</button>
+      <button type="submit" className="submit2">Evolve Pokemon</button>
     </form>
     </div>
     </>
