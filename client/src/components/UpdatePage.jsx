@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import { updatePokemon, getTypes, getPokemons } from '../redux/actions/index';
+import { updatePokemon, getTypes } from '../redux/actions/index';
 import NavBar from './NavBar';
 import "./UpdatePage.css";
 

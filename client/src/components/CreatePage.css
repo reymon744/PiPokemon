@@ -17,7 +17,7 @@
   width: 200px;
   margin-left: 20px;
   outline: none;
-  border: 2px solid orange;
+  border: 2px solid rgb(230, 84, 16);
   background: transparent;
   padding: 10px;
   border-radius: 5px;
@@ -73,7 +73,7 @@ label {
   border: none;
   height: 45px;
   border-radius: 5px;
-  background: orange;  
+  background: rgb(230, 84, 16);  
 }
 
 .submit:hover {

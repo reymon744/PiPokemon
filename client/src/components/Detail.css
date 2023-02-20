@@ -42,7 +42,7 @@
 
 
 .names {
-    color: orange;
+    color: rgb(230, 84, 16);
     font-family: 'Andy' ;
     font-size: 40px;
     margin-top: 20px;
@@ -52,24 +52,24 @@
 
 .statsTitle{
     font-size: 30px;
-    color: orange;   
+    color: rgb(230, 84, 16);   
     margin-bottom: 0px;
  }
 
  .typesTitle{
     font-size: 30px;
-    color: orange;   
+    color: rgb(230, 84, 16);   
     margin-bottom: 0px;
  }
 
 .id{
    font-size: 30px;
-   color: orange;   
+   color: rgb(230, 84, 16);   
 }
 
 .backLink{
     color: black;
-    background-color: orange;
+    background-color: rgb(230, 84, 16);
     display: inline-block;
 	padding:10px;
     margin-top:0px;
@@ -89,7 +89,7 @@
 
 
 .typeLiDetail, .typeLiDetail2{
-    color: orange;
+    color: rgb(230, 84, 16);
     font-size: 22px
 }
 
@@ -100,7 +100,7 @@
 .list{
     font-size: 22px;
     margin-top: 5px;
-    color: orange;
+    color: rgb(230, 84, 16);
 }
 
 .spaceForBack {

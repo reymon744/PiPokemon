@@ -2,7 +2,7 @@
     border-radius: 5px;
     padding: 10px 15px 10px 15px;
     background-color: #eeeeee;
-    border: 2px solid orange;
+    border: 2px solid rgb(230, 84, 16);
     margin-top: 10px;
     display: inline;
     width: 350px;
@@ -14,7 +14,7 @@
     margin-bottom: 10px;
     width: 100px;
     height: 40px;
-    background: orange;  
+    background: rgb(230, 84, 16);  
     border-radius: 5px;
     transition-duration: 0.4s;
     color: black;

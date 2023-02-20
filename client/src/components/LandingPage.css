@@ -14,7 +14,7 @@
     border: 2px solid black;
     height: 45px;
     border-radius: 50px;
-    background: orange;  
+    background: rgb(230, 84, 16);  
 }
   
 
@@ -22,9 +22,9 @@
 .buttonLanding:hover{
     cursor:pointer ;
     background: black;
-    border-color: orange;
+    border-color: rgb(230, 84, 16);
     border-radius: 50px;
-    color: orange;
+    color: rgb(230, 84, 16);
 }
 
 .divlanding {
