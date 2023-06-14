@@ -15,6 +15,7 @@ const initialState = {
   allPokemons: [], //todos los pokemons
   detail: [], 
   types: [],
+  error: null,
 };
 
 function rootReducer(state = initialState, action) {
@@ -122,7 +123,7 @@ function rootReducer(state = initialState, action) {
         ...state,
         detail: [],
       };
-
+      
     default:
       return state;
   }

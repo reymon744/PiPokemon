@@ -13,6 +13,7 @@ export const POST_POKEMON = "POST_POKEMON"
 export const REMOVE_SELECTED_POKEMON = "REMOVE_SELECTED_POKEMON"
 export const DELETE_POKEMON = "DELETE_POKEMON"
 export const UPDATE_POKEMON = "UPDATE_POKEMON"
+export const SET_ERROR = "SET_ERROR"
 
 
 //traemos los Pokemon del back

@@ -5,6 +5,8 @@ import { deletePokemon, getPokemons } from "../redux/actions/index.js";
 import {useHistory} from "react-router-dom"
 import NavBar from "./NavBar.jsx";
 import "./Delete.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Delete() {
     const dispatch = useDispatch();
@@ -18,15 +20,37 @@ export default function Delete() {
       setName(e.target.value);
     };
   
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
       if (allPokemons.some(e => e.name === name)) {
       dispatch(deletePokemon(name))
-      alert("Pokemon has been exterminated");
-      history.push("/home");
+      // alert("Pokemon has been exterminated");
+      toast.success('Pokemon has been exterminated!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        onClose: () => {
+          history.push("/home");
+        }
+        });
       }
       else {
-        alert("Pokemon not found")
+        // alert("Pokemon not found")
+        toast.error('Pokemon not found!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       }
     }
   
@@ -46,6 +70,7 @@ export default function Delete() {
           placeholder="Pokemon's name to exterminate..."
         />
         <button className ="searchButton2" type="submit" onClick= {(e) => handleSubmit(e)}> Delete </button>
+        <ToastContainer />
       </div>                 
       </div>
       </body>

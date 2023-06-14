@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetails, removeSelectedPokemon } from "../redux/actions/index.js";
 import './Detail.css'
 import NavBar from "./NavBar.jsx";
-export default function Detail(props) {
+export default function Detail() {
+  const {id} = useParams()
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getDetails(props.match.params.id)); //me viene el id de home por params
+    dispatch(getDetails(id)); //me viene el id de home por params
   }, [dispatch]);
  
   let details = useSelector((state) => state.detail); //traigo detail del estado de redux
@@ -81,7 +82,7 @@ export default function Detail(props) {
         )}
       </div>
       <div className="spaceForBack">
-      <Link onClick= {(e) => handleClick(e)} to={`/update/${props.match.params.id}`} className="backLink"> Evolve Pokemon </Link>
+      <Link onClick= {(e) => handleClick(e)} to={`/update/${id}`} className="backLink"> Evolve Pokemon </Link>
       <div className="backBotonDetails"></div>
       <Link onClick= {(e) => handleClick(e)} to="/home" className="backLink"> Back </Link> 
        
